@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Switch</title>
+	<style type="text/css">
+		
+		body{
+			background-color: #02022c;
+		}
+		.container{
+			position: absolute;
+			top: 45%;
+			left:45%;
+		}
+		.Switch{
+			position: relative;
+			display: inline-block; 
+			height: 60px;
+			width: 110px;
+			margin: 0 10px;
+
+
+		}
+		.slider{
+			position: absolute;
+			cursor: pointer;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			background-color: grey;
+			transition: .4s;
+			border-radius: 34px;
+		}
+		.Switch input{
+			display:none;
+		}
+		.slider:before{
+			position: absolute;
+			content: "";
+			height: 50px;
+			width: 50px;
+			top: 5px;
+			left: 5px;
+			background-color: white;
+			transition: 0.4s;
+			border-radius: 50px;
+		}
+		input:checked + .slider{
+			background-color:yellow;
+		}
+		input:checked + .slider:before{
+			transform: translate(50px);
+		}
+		h1{
+			color:White;
+			text-align: center; 
+			font-size: 30px;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Toggle Switch</h1><hr>
+<div class="container">
+	<label class="Switch">
+		<input type="checkbox" name="">
+		<span class="slider"></span>
+	</label>
+	
+</div>
+</body>
+</html>
